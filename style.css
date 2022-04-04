@@ -1,28 +1,25 @@
-.daddy {
-    display: grid;
-    grid-template-columns: repeat(16, auto);
-    grid-template-rows: repeat(16, auto);
+.button-input {
+    
+    text-align: center;
+    margin: 20px 0;
+}
 
+.daddy {
+    /*display: grid; 
+    grid-template-columns: repeat(16, auto); mijenaj ovo 
+    grid-template-rows: repeat(16, auto);
+    
     /* s ovim mijenjam velicinu grida */
-    max-width: 450px;
-    min-height: 500px;
+    height: 600px;
+    width: 600px;
+    border: black solid 1px;
+     
+    
+    
     margin: auto;
     /* grid-auto-rows: minmax(150px, auto);
     grid-row-gap ili grid-column-gap ili samo grid-gap ako je gap isti */
 }
-
-.boxlet {
-    min-width: 10px;
-    min-height: 10px;
-    border: black solid 0.5px;
-}
-
-/*
-.boxlet:hover {
-    background-color: black;
-}
-*/
-
 
 .active {
     background-color: black;
