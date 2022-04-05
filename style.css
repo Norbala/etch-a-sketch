@@ -13,7 +13,7 @@
     height: 600px;
     width: 600px;
     border: black solid 1px;
-     
+    
     
     
     margin: auto;
@@ -25,3 +25,8 @@
     background-color: black;
 }
 
+.boxlet {
+    
+    height: 100%;
+    
+}

@@ -1,29 +1,36 @@
 let daddy_div = document.querySelector(".daddy");
 let button_input = document.querySelector("button.input");
+let clearButton = document.querySelector("button.clear");
 let append_child = 0;
-let unos;
+let unos = 16;
 let unoss;
+
 button_input.addEventListener("click", () => {
     unos = prompt("Unesi broj od 1 do 64 - tolika ce biti velicina grida");
-    unoss = parseInt(unos);
-    daddy_div.style.gridTemplateRows = `repeat(${unoss}, auto)`;
-    daddy_div.style.gridTemplateColumns = `repeat(${unoss}, auto)`;
+    unos = parseInt(unos);
+    daddy_div.style.gridTemplateRows = `repeat(${unos}, auto)`;
+    daddy_div.style.gridTemplateColumns = `repeat(${unos}, auto)`;
     
     clearAll();
-    createGrid(unoss);
+    createGrid(unos);
+});
+
+clearButton.addEventListener("click", () => {
+    clearAll();
+    createGrid(unos);
 });
 
 // default 16*16 grid, initially created
 daddy_div.style.display = "grid";
 daddy_div.style.gridTemplateColumns = "repeat(16, auto)";
 daddy_div.style.gridTemplateRows = "repeat(16, auto)";
-createGrid(16);
+createGrid(unos);
 
 
-
+// imam 256 + n*n gridova u daddy gridu
 
 function createGrid(gridz) {
-
+    daddy_div.querySelectorAll("*").forEach(n => n.remove());
     for (let i = 0; i<gridz; i++) {
         for (let j=0;j<gridz;j++) {
             let child_div = document.createElement("div");
@@ -36,6 +43,7 @@ function createGrid(gridz) {
     };
 
     let boxlet = document.querySelectorAll(".boxlet");
+    
     
     
     boxlet.forEach(element => {
